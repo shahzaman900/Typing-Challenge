@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
 import { faker } from '@faker-js/faker';
 
 @Component({
@@ -12,30 +11,18 @@ export class AppComponent implements OnInit {
     inputText = '';
     solved = false;
 
-    // text = new FormControl();
-
     ngOnInit(): void {
-        //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-        //Add 'implements OnInit' to the class.
-        // this.text.valueChanges.subscribe((value: string) => {
-        //     this.inputText = value;
-        // });
     }
 
     onInput(event: any) {
         const input = event.target.value;
-        // this.inputText = input === '' ? null : input;
         this.inputText = input;
-        console.log(this.inputText);
-        //     // if (this.inputText === this.title) {
-        //     //     this.solved = true;
-        //     // }
     }
 
-    compare(randomNumber: string, inputText: string) {
-        if (!inputText) {
+    compare(randomNumber: string, input: string) {
+        if (!input) {
             return 'pending';
         }
-        return randomNumber === inputText ? 'correct' : 'wrong';
+        return randomNumber === input ? 'correct' : 'wrong';
     }
 }

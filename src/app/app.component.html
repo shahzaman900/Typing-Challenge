@@ -9,7 +9,6 @@
         </p>
     </mat-card-content>
     <div>
-        <!-- <input placeholder="Start Typing" [formControl]="text"  /> -->
         <input placeholder="Start Typing" (input)="onInput($event)" />
     </div>
     <mat-card-content *ngIf="rendomText === inputText">
