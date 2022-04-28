@@ -17,7 +17,6 @@ export class AppComponent implements OnInit {
     ngOnInit(): void {
         //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
         //Add 'implements OnInit' to the class.
-
         // this.text.valueChanges.subscribe((value: string) => {
         //     this.inputText = value;
         // });
@@ -25,10 +24,18 @@ export class AppComponent implements OnInit {
 
     onInput(event: any) {
         const input = event.target.value;
-        this.inputText = input === '' ? null : input;
+        // this.inputText = input === '' ? null : input;
+        this.inputText = input;
         console.log(this.inputText);
-    //     // if (this.inputText === this.title) {
-    //     //     this.solved = true;
-    //     // }
+        //     // if (this.inputText === this.title) {
+        //     //     this.solved = true;
+        //     // }
+    }
+
+    compare(randomNumber: string, inputText: string) {
+        if (!inputText) {
+            return 'pending';
+        }
+        return randomNumber === inputText ? 'correct' : 'wrong';
     }
 }

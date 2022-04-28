@@ -1,12 +1,21 @@
-.example-card{
+.example-card {
     max-width: 100%;
     display: flex;
     flex-direction: column;
     padding: 2rem;
 }
-input{
+input {
     padding: 0.5rem;
     width: 80%;
     border-radius: 0.3rem;
     margin-right: 1rem;
+}
+.pending {
+    color: black;
+}
+.correct {
+    color: green;
+}
+.wrong {
+    color: red;
 }

@@ -3,8 +3,8 @@
 
     <mat-card-content>
         <p>
-            <Span *ngFor="let letter of rendomText.split(''); let i = index"
-                >({{ letter }} {{ inputText[i] }})</Span
+            <Span  [class]="compare(letter, inputText[i])" *ngFor="let letter of rendomText.split(''); let i = index"
+                >{{ letter }}</Span
             >
         </p>
     </mat-card-content>
